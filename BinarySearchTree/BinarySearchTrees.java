@@ -1,7 +1,5 @@
 package Trees.BinarySearchTree;
 
-
-
 //creating implementing Binary Search tree
 class BinarySearchTrees{
     Node root;
