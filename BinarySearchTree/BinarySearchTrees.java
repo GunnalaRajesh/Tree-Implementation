@@ -50,6 +50,13 @@ class BinarySearchTrees{
         if(node.value > target) return search(node.left, target);
         else return search(node.right, target);
     }
+    public void isBalanced(){
+        System.out.println(isBalanced(root));
+    }
+    public boolean isBalanced(Node node){
+        if(node == null) return true;
+        return Math.abs(height(node.left)-height(node.right)) <=1 && isBalanced(node.left) && isBalanced(node.right);
+    }
     public void display(){  // displaying elements in three traversals
         System.out.print("Inorder = ");
         inOrder(root);   // (left,root,right);
@@ -59,6 +66,7 @@ class BinarySearchTrees{
         System.out.println();
         System.out.print("postOrder = ");
         postOrder(root);  // (left,right,root);
+        System.out.println();
         System.out.println("Height = "+height(root));
 
     }
